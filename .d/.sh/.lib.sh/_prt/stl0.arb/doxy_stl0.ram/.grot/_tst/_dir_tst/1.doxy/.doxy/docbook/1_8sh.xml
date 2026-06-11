@@ -1,0 +1,118 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_1_8sh" xml:lang="en-US">
+<title>/home/st/REPOBARE/_repo/st_rc_d/.d/.arb/stl0.arb/doxy_stl0.ram/.grot/_tst/_dir_tst/1.ossa/1.sh File Reference</title>
+<indexterm><primary>/home/st/REPOBARE/_repo/st_rc_d/.d/.arb/stl0.arb/doxy_stl0.ram/.grot/_tst/_dir_tst/1.ossa/1.sh</primary></indexterm>
+<para>
+
+<para>Runs the cooles things in the world. </para>
+ 
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_1_8sh_1aced1eae7629d21fa6cfc1077ed460a09">func_check_user_root</link> ()</para>
+
+<para>Check User root. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para>String <link linkend="_1_8sh_1a3954d7bfa09f488946bc9fd37ef3e7e0">V_INTERNALSTARTTIME</link> = $(date +%s)</para>
+
+<para>This holds the starttime. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_1_8sh_1a770b63fb2fd5114ddc4577dc8d6e1b99"/>String <link linkend="_1_8sh_1a770b63fb2fd5114ddc4577dc8d6e1b99">V_CURRENTTIMESTAMP</link> = $(date +%y%m%d-%H%M%S)</para>
+
+<para>This holds the date in YYMMDD-HHMMSS format. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_1_8sh_1a794dd8efc8d3cf27ed9b62732418e0e2"/>String <link linkend="_1_8sh_1a794dd8efc8d3cf27ed9b62732418e0e2">V_HOSTNAME</link> = $(hostname -s)</para>
+
+<para>This holds the hostname of the local system. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_1_8sh_1ad9d878c0b5598608f0046245c7e815eb"/>Exported String <link linkend="_1_8sh_1ad9d878c0b5598608f0046245c7e815eb">D_SCRIPT</link> = $(cd $(dirname $0) &amp;&amp; pwd)</para>
+
+<para>The local directory of the script. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Runs the cooles things in the world. </para>
+
+<para><formalpara><title>Author</title>
+
+<para>Uli Wolf </para>
+</formalpara>
+<formalpara><title>Date</title>
+
+<para>2016-06-08 </para>
+</formalpara>
+<formalpara><title>Copyright</title>
+
+<para>Released under the WTFPL</para>
+</formalpara>
+This script provides the required code to run code that is cooler than anybody elses code </para>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_1_8sh_1aced1eae7629d21fa6cfc1077ed460a09"/>    <section>
+    <title>func_check_user_root()</title>
+<indexterm><primary>func_check_user_root</primary><secondary>1.sh</secondary></indexterm>
+<indexterm><primary>1.sh</primary><secondary>func_check_user_root</secondary></indexterm>
+<para><computeroutput>func_check_user_root ( )</computeroutput></para><para>
+
+<para>Check User root. </para>
+</para>
+
+<para><formalpara><title>Author</title>
+
+<para>Uli Wolf The Second </para>
+</formalpara>
+
+                <formalpara>
+                    <title>
+Return values                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>0</entry>
+                                <entry>
+<para>if the user is root </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>1</entry>
+                                <entry>
+<para>if the user is not root</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                Checks if the current user is root </para>
+</section>
+</section>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="_1_8sh_1a3954d7bfa09f488946bc9fd37ef3e7e0"/>    <section>
+    <title>V_INTERNALSTARTTIME</title>
+<indexterm><primary>V_INTERNALSTARTTIME</primary><secondary>1.sh</secondary></indexterm>
+<indexterm><primary>1.sh</primary><secondary>V_INTERNALSTARTTIME</secondary></indexterm>
+<para><computeroutput>V_INTERNALSTARTTIME = $(date +%s)</computeroutput></para><para>
+
+<para>This holds the starttime. </para>
+</para>
+
+<para>Time is measured in seconds since 1st. of January 1970. The value will be used to later calculate the runtime of the script. </para>
+</section>
+</section>
+</section>

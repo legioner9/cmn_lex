@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# START EXL FILE >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+rr_
+# head start (ident variables)-----------------------
+# eval arg_string="--tml "${tml_file}" --name "${name_repo}" -verbose"
+
+eval echo "\${arg_string}": "${arg_string}"
+eval echo "\${tml_file}": "${tml_file}"
+eval echo "\${name_repo}": "${name_repo}"
+eval echo "\${exl_file}": "${exl_file}"
+
+# head end (ident variables)-----------------------
+
+# exec block start --------------------------------
+eval gdel_local_bare_ "${arg_string}"
+eval gpush_ "${arg_string}"
+# exec block end --------------------------------
+
+# END EXL FILE >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>

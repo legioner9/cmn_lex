@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.1" xml:lang="en-US">
+  <compound refid="1_8sh" kind="file"><name>1.sh</name>
+    <member refid="1_8sh_1a3954d7bfa09f488946bc9fd37ef3e7e0" kind="variable"><name>V_INTERNALSTARTTIME</name></member>
+    <member refid="1_8sh_1a770b63fb2fd5114ddc4577dc8d6e1b99" kind="variable"><name>V_CURRENTTIMESTAMP</name></member>
+    <member refid="1_8sh_1a794dd8efc8d3cf27ed9b62732418e0e2" kind="variable"><name>V_HOSTNAME</name></member>
+    <member refid="1_8sh_1ad9d878c0b5598608f0046245c7e815eb" kind="variable"><name>D_SCRIPT</name></member>
+    <member refid="1_8sh_1aced1eae7629d21fa6cfc1077ed460a09" kind="function"><name>func_check_user_root</name></member>
+  </compound>
+  <compound refid="1_8ossa_2doxygen__c_8h" kind="file"><name>doxygen_c.h</name>
+  </compound>
+  <compound refid="2_8ossa_2doxygen__c_8h" kind="file"><name>doxygen_c.h</name>
+  </compound>
+  <compound refid="2_8sh" kind="file"><name>2.sh</name>
+    <member refid="2_8sh_1ad441e79f437ef238f73879de31d1141a" kind="variable"><name>V_INTERNALSTARTTIME</name></member>
+    <member refid="2_8sh_1a5b495c94efec58659086168abbe47906" kind="variable"><name>V_CURRENTTIMESTAMP</name></member>
+    <member refid="2_8sh_1af010cd2e6bd799458894029b7365f152" kind="variable"><name>V_HOSTNAME</name></member>
+    <member refid="2_8sh_1ad9d878c0b5598608f0046245c7e815eb" kind="variable"><name>D_SCRIPT</name></member>
+    <member refid="2_8sh_1aced1eae7629d21fa6cfc1077ed460a09" kind="function"><name>func_check_user_root</name></member>
+  </compound>
+  <compound refid="dir_4ea3534a03e43387b80e632a8773f295" kind="dir"><name>/home/st/REPOBARE/_repo/st_rc_d/.d/.arb/stl0.arb/doxy_stl0.ram/.grot/_tst/_dir_tst/1.ossa</name>
+  </compound>
+  <compound refid="dir_9acd9345d40a16d7e577c9f777c9b102" kind="dir"><name>/home/st/REPOBARE/_repo/st_rc_d/.d/.arb/stl0.arb/doxy_stl0.ram/.grot/_tst/_dir_tst/2.ossa</name>
+  </compound>
+  <compound refid="indexpage" kind="page"><name>index</name>
+  </compound>
+</doxygenindex>

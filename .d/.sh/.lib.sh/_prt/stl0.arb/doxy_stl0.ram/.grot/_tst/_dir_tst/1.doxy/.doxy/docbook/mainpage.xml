@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<chapter xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_mainpage" xml:lang="en-US">
+
+<para>This line shows a quick overview of what the Project does</para>
+<section xml:id="_index_1secoverview">
+<title>Overview</title>
+
+<para>Now this section shows really the details. </para>
+</section>
+<section xml:id="_index_1secprerequisites">
+<title>Prerequisites</title>
+
+<para>This describes the minimum requirements to run this script </para>
+<section xml:id="_index_1subsecdatabase">
+<title>Prerequisites: Database</title>
+
+<para><itemizedlist>
+<listitem>
+<para>No database is required currently </para>
+</listitem></itemizedlist>
+</para>
+</section>
+<section xml:id="_index_1subsecagentversions">
+<title>Prerequisites: Minimum Version of the Agents</title>
+
+<para>The minimum level of the respective are:<itemizedlist>
+<listitem>
+<para>What Agents? </para>
+</listitem></itemizedlist>
+</para>
+</section>
+</section>
+<section xml:id="_index_1secintro">
+<title>Installation</title>
+
+<para>Here you could show how to install the script </para>
+</section>
+<section xml:id="_index_1secexecution">
+<title>Execution</title>
+
+<para>The script is executed like this. The usage of the user root is forbidden. <literallayout><computeroutput>myfile.sh
+</computeroutput></literallayout> </para>
+</section>
+</chapter>

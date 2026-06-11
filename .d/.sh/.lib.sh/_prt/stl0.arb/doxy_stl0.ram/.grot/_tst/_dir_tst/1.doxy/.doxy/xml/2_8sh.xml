@@ -1,0 +1,164 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="2_8sh" kind="file" language="C++">
+    <compoundname>2.sh</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="2_8sh_1ad441e79f437ef238f73879de31d1141a" prot="public" static="no" mutable="no">
+        <type>String</type>
+        <definition>String V_INTERNALSTARTTIME</definition>
+        <argsstring></argsstring>
+        <name>V_INTERNALSTARTTIME</name>
+        <initializer>= $(date +%s)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/st/REPOBARE/_repo/st_rc_d/.d/.arb/stl0.arb/doxy_stl0.ram/.grot/_tst/_dir_tst/2.ossa/2.sh" line="35" column="8" bodyfile="/home/st/REPOBARE/_repo/st_rc_d/.d/.arb/stl0.arb/doxy_stl0.ram/.grot/_tst/_dir_tst/2.ossa/2.sh" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="2_8sh_1a5b495c94efec58659086168abbe47906" prot="public" static="no" mutable="no">
+        <type>String</type>
+        <definition>String V_CURRENTTIMESTAMP</definition>
+        <argsstring></argsstring>
+        <name>V_CURRENTTIMESTAMP</name>
+        <initializer>= $(date +%y%m%d-%H%M%S)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/st/REPOBARE/_repo/st_rc_d/.d/.arb/stl0.arb/doxy_stl0.ram/.grot/_tst/_dir_tst/2.ossa/2.sh" line="40" column="8" bodyfile="/home/st/REPOBARE/_repo/st_rc_d/.d/.arb/stl0.arb/doxy_stl0.ram/.grot/_tst/_dir_tst/2.ossa/2.sh" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="2_8sh_1af010cd2e6bd799458894029b7365f152" prot="public" static="no" mutable="no">
+        <type>String</type>
+        <definition>String V_HOSTNAME</definition>
+        <argsstring></argsstring>
+        <name>V_HOSTNAME</name>
+        <initializer>= $(hostname -s)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/st/REPOBARE/_repo/st_rc_d/.d/.arb/stl0.arb/doxy_stl0.ram/.grot/_tst/_dir_tst/2.ossa/2.sh" line="45" column="8" bodyfile="/home/st/REPOBARE/_repo/st_rc_d/.d/.arb/stl0.arb/doxy_stl0.ram/.grot/_tst/_dir_tst/2.ossa/2.sh" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="2_8sh_1ad9d878c0b5598608f0046245c7e815eb" prot="public" static="no" mutable="no">
+        <type>Exported String</type>
+        <definition>Exported String D_SCRIPT</definition>
+        <argsstring></argsstring>
+        <name>D_SCRIPT</name>
+        <initializer>= $(cd $(dirname $0) &amp;&amp; pwd)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/st/REPOBARE/_repo/st_rc_d/.d/.arb/stl0.arb/doxy_stl0.ram/.grot/_tst/_dir_tst/2.ossa/2.sh" line="50" column="17" bodyfile="/home/st/REPOBARE/_repo/st_rc_d/.d/.arb/stl0.arb/doxy_stl0.ram/.grot/_tst/_dir_tst/2.ossa/2.sh" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="2_8sh_1aced1eae7629d21fa6cfc1077ed460a09" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>func_check_user_root</definition>
+        <argsstring>()</argsstring>
+        <name>func_check_user_root</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/st/REPOBARE/_repo/st_rc_d/.d/.arb/stl0.arb/doxy_stl0.ram/.grot/_tst/_dir_tst/2.ossa/2.sh" line="59" column="1" bodyfile="/home/st/REPOBARE/_repo/st_rc_d/.d/.arb/stl0.arb/doxy_stl0.ram/.grot/_tst/_dir_tst/2.ossa/2.sh" bodystart="59" bodyend="59"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Runs the cooles things in the world. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Uli Wolf </para>
+</simplesect>
+<simplesect kind="date"><para>2016-06-08 </para>
+</simplesect>
+<simplesect kind="copyright"><para>Released under the WTFPL</para>
+</simplesect>
+This script provides the required code to run code that is cooler than anybody elses code </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#!/bin/sh</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">##<sp/>@file<sp/>2.sh</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">##<sp/>@brief<sp/>Runs<sp/>the<sp/>cooles<sp/>things<sp/>in<sp/>the<sp/>world.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">##<sp/>@author<sp/>Uli<sp/>Wolf</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">##<sp/>@date<sp/>2016-06-08</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">##<sp/>@copyright<sp/>Released<sp/>under<sp/>the<sp/>WTFPL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">##<sp/>@details<sp/>This<sp/>script<sp/>provides<sp/>the<sp/>required<sp/>code<sp/>to<sp/>run<sp/>code<sp/>that<sp/>is<sp/>cooler<sp/>than<sp/>anybody<sp/>elses<sp/>code</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#######################################################################################################################</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">##<sp/>@mainpage<sp/>MyFile<sp/>Docs</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">##<sp/>This<sp/>line<sp/>shows<sp/>a<sp/>quick<sp/>overview<sp/>of<sp/>what<sp/>the<sp/>Project<sp/>does</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">##<sp/>@tableofcontents</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">##<sp/>@section<sp/>secoverview<sp/>Overview</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">##<sp/>Now<sp/>this<sp/>section<sp/>shows<sp/>really<sp/>the<sp/>details.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">##<sp/>@section<sp/>secprerequisites<sp/>Prerequisites</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">##<sp/>This<sp/>describes<sp/>the<sp/>minimum<sp/>requirements<sp/>to<sp/>run<sp/>this<sp/>script</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">##<sp/>@subsection<sp/>subsecdatabase<sp/>Prerequisites:<sp/>Database</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">##<sp/>*<sp/>No<sp/>database<sp/>is<sp/>required<sp/>currently</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">##<sp/>@subsection<sp/>subsecagentversions<sp/>Prerequisites:<sp/>Minimum<sp/>Version<sp/>of<sp/>the<sp/>Agents</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">##<sp/>The<sp/>minimum<sp/>level<sp/>of<sp/>the<sp/>respective<sp/>are:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">##<sp/>*<sp/>What<sp/>Agents?</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">##<sp/>@section<sp/>secintro<sp/>Installation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">##<sp/>Here<sp/>you<sp/>could<sp/>show<sp/>how<sp/>to<sp/>install<sp/>the<sp/>script</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">##<sp/>@section<sp/>secexecution<sp/>Execution</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">##<sp/>The<sp/>script<sp/>is<sp/>executed<sp/>like<sp/>this.<sp/>The<sp/>usage<sp/>of<sp/>the<sp/>user<sp/>root<sp/>is<sp/>forbidden.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">##<sp/>```{.sh}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">##<sp/>myfile.sh</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">##<sp/>```</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#######################################################################################################################</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>Various<sp/>Variable<sp/>definitions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">##<sp/>@var<sp/>V_INTERNALSTARTTIME</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">##<sp/>@brief<sp/>This<sp/>holds<sp/>the<sp/>starttime</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">##<sp/>@showinitializer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">##<sp/>@details<sp/>Time<sp/>is<sp/>measured<sp/>in<sp/>seconds<sp/>since<sp/>1st.<sp/>of<sp/>January<sp/>1970.<sp/>The<sp/>value<sp/>will<sp/>be<sp/>used<sp/>to<sp/>later<sp/>calculate<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">##<sp/>runtime<sp/>of<sp/>the<sp/>script.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal">declare<sp/><ref refid="1_8sh_1a3954d7bfa09f488946bc9fd37ef3e7e0" kindref="member">V_INTERNALSTARTTIME</ref>=$(date<sp/>+%s);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">##<sp/>@var<sp/>V_CURRENTTIMESTAMP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">##<sp/>@brief<sp/>This<sp/>holds<sp/>the<sp/>date<sp/>in<sp/>YYMMDD-HHMMSS<sp/>format</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">##<sp/>@showinitializer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal">declare<sp/><ref refid="1_8sh_1a770b63fb2fd5114ddc4577dc8d6e1b99" kindref="member">V_CURRENTTIMESTAMP</ref>=$(date<sp/>+%y%m%d-%H%M%S);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">##<sp/>@var<sp/>V_HOSTNAME</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">##<sp/>@brief<sp/>This<sp/>holds<sp/>the<sp/>hostname<sp/>of<sp/>the<sp/>local<sp/>system</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">##<sp/>@showinitializer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal">declare<sp/><ref refid="1_8sh_1a794dd8efc8d3cf27ed9b62732418e0e2" kindref="member">V_HOSTNAME</ref>=$(hostname<sp/>-s);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">##<sp/>@var<sp/>D_SCRIPT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">##<sp/>@brief<sp/>The<sp/>local<sp/>directory<sp/>of<sp/>the<sp/>script</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">##<sp/>@showinitializer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal">declare<sp/>-x<sp/><ref refid="1_8sh_1ad9d878c0b5598608f0046245c7e815eb" kindref="member">D_SCRIPT</ref>=$(cd<sp/>$(dirname<sp/>$0)<sp/>&amp;&amp;<sp/>pwd);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">export<sp/><ref refid="1_8sh_1ad9d878c0b5598608f0046245c7e815eb" kindref="member">D_SCRIPT</ref></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor">##<sp/>@fn<sp/>func_check_user_root()</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor">##<sp/>@author<sp/>Uli<sp/>Wolf<sp/>The<sp/>Second</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">##<sp/>@brief<sp/>Check<sp/>User<sp/>root</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor">##<sp/>@retval<sp/>0<sp/>if<sp/>the<sp/>user<sp/>is<sp/>root</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="preprocessor">##<sp/>@retval<sp/>1<sp/>if<sp/>the<sp/>user<sp/>is<sp/>not<sp/>root</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="preprocessor">##<sp/>@details<sp/>Checks<sp/>if<sp/>the<sp/>current<sp/>user<sp/>is<sp/>root</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><ref refid="1_8sh_1aced1eae7629d21fa6cfc1077ed460a09" kindref="member">func_check_user_root</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/>local<sp/>CURRENTUSER=`whoami`;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>[[<sp/>$CURRENTUSER<sp/>!=<sp/></highlight><highlight class="stringliteral">&quot;root&quot;</highlight><highlight class="normal"><sp/>]];<sp/>then</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/>fi</highlight></codeline>
+<codeline lineno="66"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>[[<sp/>$(<ref refid="1_8sh_1aced1eae7629d21fa6cfc1077ed460a09" kindref="member">func_check_user_root</ref>)<sp/>==<sp/>1<sp/>]];<sp/>then</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/>echo<sp/></highlight><highlight class="stringliteral">&quot;You<sp/>are<sp/>really<sp/>not<sp/>using<sp/>root<sp/>-<sp/>awesome!&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal">fi</highlight></codeline>
+    </programlisting>
+    <location file="/home/st/REPOBARE/_repo/st_rc_d/.d/.arb/stl0.arb/doxy_stl0.ram/.grot/_tst/_dir_tst/2.ossa/2.sh"/>
+  </compounddef>
+</doxygen>

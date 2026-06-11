@@ -1,0 +1,51 @@
+#!/usr/bin/env bash
+
+__ufl_stl0_FLOW() {
+
+    if ! command -v ufl_stl0 >/dev/null; then
+        echo "TYPE_ERROR : ufl_stl0" >&2
+        return 1
+    fi
+
+    filename=${ST_RC_D_PATH}/.d/.arb/stl0.arb/ufl_stl0.ram/.grot/_tst/_flow_tst.sh.v2
+
+    local PW=$(pwd)
+    local idir="$(dirname ${filename})"
+
+    local ARGS0="$1"
+    local ARGS1="$2"
+    local ARGS2="$3"
+    local ARGS3="$4"
+
+    local NARGS=$#
+
+    cd "${idir}" || {
+        echo "${idir} not dir" >&2
+        return 1
+    }
+
+    #?----------------------------------------------------
+    #?-------------------------------------
+
+    # : >res
+
+     _st_info "tst 'ufl_stl0' catalogs"
+
+    cd _dir_tst || {
+        _st_info "${idir}/_dir_tst NOT_DIR return 1"
+        return 1
+    }
+
+    ufl_stl0
+
+    #?-------------------------------------
+    #?----------------------------------------------------
+
+    cd "${PW}" || {
+        echo "${PW} not dir" >&2
+        return 1
+    }
+
+}
+
+__ufl_stl0_FLOW "$@"

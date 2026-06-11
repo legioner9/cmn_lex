@@ -1,0 +1,59 @@
+
+<!-- [[__TOC_]] -->
+
+<a name=top></a>
+<a class=top-link hide href=#top>↑</a>
+
+Start Contents Menu
+
+<!-- TOC toc2f_stl0 -->
+
+End Contents Menu
+
+
+# Рекомендации RCM [001.pref.txt.md](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.ins_dr/001.rcm.d/cnx.d/002.d/001.pref.txt.md)
+
+
+## RCM_1 (изменения в оригинал) [002.rcm_1.txt.md](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.ins_dr/001.rcm.d/cnx.d/002.d/002.rcm_1.txt.md)
+
+в оригинал вносим изменения - копия для истории изменений
+    
+
+
+## RCM_2 (служебные файлы) [003.rcm_2.txt.md](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.ins_dr/001.rcm.d/cnx.d/002.d/003.rcm_2.txt.md)
+
+при работе утилиты формировать следующие файлы рядом с результатами работы
+  - лог
+    - отдельно лог ошибок
+  - ридми 
+    - readme.stnd.md
+    - readme.flow.md
+  - сорс файлы для запуска в командной строке
+    
+
+
+
+
+
+## RCM_3 (cокращения) [004.rcm_3.txt.md](/REPOBARE/_repo/st_rc_d/.d/.mul/rbld_readme.mul/.ins_dr/001.rcm.d/cnx.d/002.d/004.rcm_3.txt.md)
+
+    dr - dir
+    fl - file
+    et - entety - file|dir
+    nm - name
+    et_lk - entety ссылка в ее имени содержится способ ее обработки
+    sdr - subdir
+    pth - path
+    rcv_dr - rcv dir
+    ins_dr - ins dir
+    prx - prefix
+    ptx - postfix
+    prx_et - prefix for entety (e.c. recommendationSTL for dr @|for fl &)
+    ptx_fn - postfix фиксирует принадлежность служебных файлов сфрмированых работой fn
+    lext - последнее расширение имени справа 
+    cnx - context 
+    res - результат вставки context
+    
+
+
+

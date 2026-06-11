@@ -1,0 +1,5 @@
+MATHJAX_RELPATH        = https://cdn.jsdelivr.net/npm/mathjax@2
+MAN_EXTENSION          = .3
+SEARCHDATA_FILE        = searchdata.xml
+DOT_FONTNAME           = Helvetica
+DOT_FONTSIZE           = 10

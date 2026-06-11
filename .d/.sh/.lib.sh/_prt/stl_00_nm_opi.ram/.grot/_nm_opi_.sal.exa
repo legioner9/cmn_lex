@@ -1,0 +1,489 @@
+#!/bin/bash
+
+#! amount args
+# ${_is_amount_arg} ${NARGS} min_equ max_equ
+# if [ $? -ne 0 ]; then
+#     plt_pause "from ${FNN}() :: ${_is_amount_arg} ${NARGS} min_equ:: be return 1"
+#     return 1
+# fi
+#! normalize ptr_path -> absolut path
+# ptr_path=$1
+# ptr_path=$(${_abs_path} $PPWD "ptr_path") #ptr args
+#! variables for cr_f_dir_insert_
+# fn_name=$(${_prs_f} -n ${arg_path})
+# root_path=$(${_prs_f} -d ${arg_path})
+#! search in array
+# [[ " ${arr[*]} " =~ " $1 " ]] && echo "true" || echo "false"
+#! ${array[@]:1} all from 1 member arr
+
+# echo -e "${GREEN}\${g_args[@]} = ${g_args[*]}${NORMAL}" #print variable
+# echo -e "${GREEN}\${e_args[@]} = ${e_args[*]}${NORMAL}" #print variable
+# echo -e "${GREEN}\${f_args[@]} = ${f_args[*]}${NORMAL}" #print variable
+# echo -e "${GREEN}\${ARGS[@]} = ${ARGS[*]}${NORMAL}"     #print variable
+# echo -e "${GREEN}\${NARGS} = ${NARGS}${NORMAL}"         #print variable
+# echo -e "${GREEN}\${ARGS0} = ${ARGS0}${NORMAL}"         #print variable
+# echo -e "${GREEN}\${ARGS1} = ${ARGS1}${NORMAL}"         #print variable
+# echo -e "${GREEN}\${ARGS2} = ${ARGS2}${NORMAL}"         #print variable
+# echo -e "${GREEN}\${PPWD} = ${PPWD}${NORMAL}"           #print variable
+
+# echo -e "${GREEN}\${dir_fns_} = ${dir_fns_}${NORMAL}" #print variable
+
+# echo -e "${GREEN}\${var_wrap_arr[@]} = ${var_wrap_arr[*]}${NORMAL}" #print variable
+# echo -e "${GREEN}\${var_fn_arr[@]} = ${var_fn_arr[*]}${NORMAL}"     #print variable
+
+# echo -e "${GREEN}\${arg_fn_arr[@]} = ${arg_fn_arr[*]}${NORMAL}"
+# echo -e "${GREEN}\${env_fn_arr[@]} = ${env_fn_arr[*]}${NORMAL}"
+# echo -e "${GREEN}\${pts_fn_arr[@]} = ${pts_fn_arr[*]}${NORMAL}"
+
+# echo -e "${GREEN}\$val_ppr = $val_ppr${NORMAL}" #print variable
+
+# echo -e "${GREEN}\$ratis = $ratis${NORMAL}" #print variable
+
+# echo "that ${FNN}.sal"
+
+#! every from list_strong_cntls by able
+# list_strong_cntls=(?str_ ?del_ ?parr_)
+# for item in "${list_strong_cntls[@]}"; do
+#     echo -e "${GREEN}\$item = $item${NORMAL}" #print variable
+#     echo "$(eval echo \$"$item")"
+#     if [ -z "$(eval echo \$"$item")" ]; then
+#         plt_info "from ${FNN}() :: $item is empty :: be return 1"
+#         return 1
+#     fi
+# done
+
+#! once dpl_ or bcp_ mast be able (0 1)
+# sum_1=$((${dpl_:-0} + ${bcp_:-0}))
+# echo -e "${GREEN}\$sum_1 = $sum_1${NORMAL}"
+
+# if [ "${sum_1:-0}" -ne 1 ]; then
+#     plt_info "from ${FNN}() once dpl_ or bcp_ mast be able :: be return 1"
+#     return 1
+# fi
+
+#! see ${PATH_CURR_REPO}/NBash/_man/ptr/flow_1.sh
+#? in nid allready be reseiving value from ppr_
+#   eval val_ppr=\$"${ppr_}" # reseiving value from ppr_
+#? use and assign new value to ppr_
+#   eval ${ppr_}=$(any_fn ${val_ppr}) # use old value of ppr_ and assign new value to ppr_
+
+#! in pts_fn_arr contane external idetificators (pointers)
+# num=
+# echo num>pts.list
+# any_fn(){num=10}
+# any_fn --_pts pts.list
+# any_fn
+# echo ${num}
+# 10
+
+#! cr fs cr_f_
+# cr_f_ \
+#     "$filename" \
+#     --tml "${PATH_TML_DIR}/cr_shf_/shf.tml" \
+#     --fi0 "${header}" --fr0 "{header}" \
+#     --vi0 "$filename" --vr0 "{filename}"
+
+#! cr fs standart
+# "${_obs_quis_}" "$filename"
+# "${_upg_path}" "$filename"
+
+#! cr fs cr_f_dir_insert_
+# ${_cr_f_dir_insert_} --name ${filename} --dir_insert ${PATH_INSERT_DIR}/obs_quis_
+
+#! innerfns
+# if [ -d "${sil_}/proc/fol_" ]; then
+
+#     c_up "${sil_}/proc/fol_"
+
+#     inner_fn_arr=()
+#     dr2parr_ inner_fn_arr 3 "${sil_}/proc/fol_"
+
+# else
+#     plt_exit "in ${FNN} : NOT_DIR : '${sil_}/proc/fol_' return 1"
+#     return 1
+# fi
+
+# for item6 in ${inner_fn_arr[@]}; do
+#     echo -e "${GREEN}\$item6 = $item6${NORMAL}" #print variable
+
+#     ${item6}
+
+#     ret_nom=$?
+#     if [ ${ret_nom} -eq 2 ]; then
+#         return 0
+#     fi
+#     if [ ${ret_nom} -eq 3 ]; then
+#         return 1
+#     fi
+#     echo -e "${GREEN}\$ret_nom = $ret_nom${NORMAL}" #print variable
+
+# done
+
+#?--------------------------------------------------------
+#?---------------------------------------------
+#?---------------------------------------
+
+dir_nm_opi_=${PLT_PATH}/.d/.mul/nm_opi_
+
+dir_nm_opi_util=${dir_nm_opi_}/util
+dir_nm_opi_set_fn=${dir_nm_opi_}/set_fn
+dir_nm_opi_singl_fn=${dir_nm_opi_}/singl_fn
+
+dir_nm_opi_var=${PD_PATH}/.d/.mul/nm_opi_/var
+dir_nm_opi_lst=${PD_PATH}/.d/.mul/nm_opi_/lst
+
+#? dir with inner function to use in main and ham files
+dir_plt_proc_ham=${PLT_PATH}/.d/.proc/.ham
+dir_pd_proc_ham=${PD_PATH}/.d/.proc/.ham
+
+flag_dexec2err__=0
+
+#* ---------- START UP TO MEMO FN ------------------
+
+if ! dexec2err__ "${dir_nm_opi_util}"; then
+    plt_info "in nm_opi_() : FAIL_EXEC : 'dexec2err__ ${dir_nm_opi_util}' : flag_dexec2err__=1"
+    flag_dexec2err__=1
+fi
+
+if ! dexec2err__ "${dir_nm_opi_var}"; then
+    plt_info "in nm_opi_() : FAIL_EXEC : 'dexec2err__ ${dir_nm_opi_var}' : flag_dexec2err__=1"
+    flag_dexec2err__=1
+fi
+
+if ! dexec2err__ "${dir_nm_opi_set_fn}"; then
+    plt_info "in nm_opi_() : FAIL_EXEC : 'dexec2err__ ${dir_nm_opi_set_fn}' : flag_dexec2err__=1"
+    flag_dexec2err__=1
+fi
+
+if ! dexec2err__ "${dir_nm_opi_singl_fn}"; then
+    plt_info "in nm_opi_() : FAIL_EXEC : 'dexec2err__ ${dir_nm_opi_singl_fn}' : flag_dexec2err__=1"
+    flag_dexec2err__=1
+fi
+
+if ! dexec2err__ "${dir_plt_proc_ham}"; then
+    plt_info "in nm_opi_() : FAIL_EXEC : 'dexec2err__ ${dir_plt_proc_ham}' : flag_dexec2err__=1"
+    flag_dexec2err__=1
+fi
+
+if ! dexec2err__ "${dir_pd_proc_ham}"; then
+    plt_info "in nm_opi_() : FAIL_EXEC : 'dexec2err__ ${dir_pd_proc_ham}' : flag_dexec2err__=1"
+    flag_dexec2err__=1
+fi
+
+if [ ${flag_dexec2err__} -eq 1 ]; then
+    plt_info "in nm_opi_() : FAIL_EXEC : in any 'dexec2err__()' : return 1"
+    return 1
+fi
+
+#* ---------- START UP TO MEMO FN ------------------
+
+#* ---------- START CHOICE VAR ------------------
+
+echo -e "${BLUE}--- exec ${FNN}() (num_menu) ---${NORMAL}" #started functions
+arr=($(d2e ${dir_nm_opi_var}))
+res=()
+
+#{arr_res}
+# arr+=("aaaaaaaaa")
+# res+=("bbbbbbbbb")
+# arr+=("aaaaaaaaa")
+# res+=("bbbbbbbbb")
+# arr+=("aaaaaaaaa")
+# res+=("bbbbbbbbb")
+# arr+=("aaaaaaaaa")
+# res+=("bbbbbbbbb")
+# arr+=("aaaaaaaaa")
+# res+=("bbbbbbbbb")
+# arr+=("aaaaaaaaa")
+# res+=("bbbbbbbbb")
+
+arr+=("edit_ ${dir_nm_opi_set_fn}")
+res+=("edit_ ${dir_nm_opi_set_fn}")
+
+arr+=("edit_ ${dir_nm_opi_singl_fn}")
+res+=("edit_ ${dir_nm_opi_singl_fn}")
+
+arr+=("edit_ ${dir_nm_opi_lst}")
+res+=("edit_ ${dir_nm_opi_lst}")
+
+arr+=("edit_ ${dir_nm_opi_var}")
+res+=("edit_ ${dir_nm_opi_var}")
+
+arr+=("DO! bcp_before_push__")
+res+=("bcp_before_push__")
+
+arr+=("DO! dpl_after_pull__")
+res+=("dpl_after_pull__")
+
+arr+=("DO! gig_file_change_repo_smp0 ${REPO_PATH} ${PD_PATH}/.d/.mul/nm_opi_/lst/017_change_repo.ax.lst")
+res+=("gig_file_change_repo_smp0 ${REPO_PATH} ${PD_PATH}/.d/.mul/nm_opi_/lst/017_change_repo.ax.lst")
+
+arr+=("exit menu")
+res+=("return 0")
+
+# echo -e "${GREEN}\${arr[@]} = ${arr[*]}${NORMAL}" #print variable
+# echo -e "${GREEN}\${res[@]} = ${res[*]}${NORMAL}" #print variable
+
+elegendi_done=0
+
+if [ $(num_01 ${ARGS0}) -eq 1 ] && [ ${ARGS0} -le ${#arr[@]} ]; then
+    num_res=$((${ARGS0} - 1))
+    # ${res[${num_res}]}
+    arr_str=(${arr[${num_res}]})
+
+    echo -e "${GREEN}\${arr_str[0]} = ${arr_str[0]}${NORMAL}"           #print variable
+    echo -e "${GREEN}\${res[${num_res}]} = ${res[${num_res}]}${NORMAL}" #print variable
+
+    if [ "${arr_str[0]}" == "edit_" ]; then
+        ${arr[${num_res}]}
+        return 0
+        # ${FNN} "$@"
+    elif [ "${arr_str[0]}" == "DO!" ]; then
+        ${res[${num_res}]}
+        return 0
+        # ${FNN} "$@"
+    elif [ "${arr_str[0]}" == "exit" ]; then
+        return 0
+    else
+        fn_var_nm_opi_=$(prs_f -n "${arr[${num_res}]}")
+        elegendi_done=1
+    fi
+
+    # echo -e "${GREEN}\$file_var_nm_opi_ = $file_var_nm_opi_${NORMAL}" #print variable
+
+fi
+
+if [ "${elegendi_done}" -eq 0 ]; then
+    PS3="eligendi actiones: "
+    select item_arr in "${arr[@]}"; do
+        for ((i = 0; i < 1000; i++)); do
+            if [[ ${item_arr} == ${arr[$i]} ]]; then
+
+                arr_str=(${arr[$i]})
+
+                # echo -e "${GREEN}\${arr_str[0]} = ${arr_str[0]}${NORMAL}" #print variable
+                # echo -e "${GREEN}\${res[$i]} = ${res[$i]}${NORMAL}" #print variable
+
+                if [ "${arr_str[0]}" == "edit_" ]; then
+                    ${arr[$i]}
+                    return 0
+                    # ${FNN} "$@"
+                elif [ "${arr_str[0]}" == "do" ]; then
+                    ${res[$i]}
+                    return 0
+                    # ${FNN} "$@"
+                elif [ "${arr_str[0]}" == "exit" ]; then
+                    return 0
+                else
+                    fn_var_nm_opi_=$(prs_f -n "${arr[$i]}")
+                fi
+            fi
+        done
+        break
+    done
+fi
+
+#* ---------- END CHOICE VAR ------------------
+
+#* that VAR for
+
+# dir_contaner
+# dir_repo
+# dir_bare
+
+# clone_net
+# clone_local
+
+# pull_net_strong
+# pull_local_strong
+
+# push_net_strong
+# push_local_strong
+
+# push_net
+# push_local
+
+nm_opi_up_to_memory_var() {
+    echo -e "${BLUE}--- nm_opi_up_to_memory_var() ---${NORMAL}"  #sistem info mesage
+    echo -e "${HLIGHT}--- exec : ${fn_var_nm_opi_} ---${NORMAL}" #start files
+
+    if ! ${fn_var_nm_opi_}; then
+
+        plt_info "in file://${PLT_PATH}/.d/.sal.ax/nm_opi_/nm_opi_.sal : FAIL_EXEC : ${fn_var_nm_opi_} : return 1"
+        return 1
+
+    fi
+
+    if ! pars_var_nm_opi__util__mul; then
+        plt_info "in file://${PLT_PATH}/.d/.sal.ax/nm_opi_/nm_opi_.sal : FAIL_EXEC : pars_var_nm_opi__util__mul() : return 1"
+        return 1
+    fi
+
+}
+
+#* ---------- START CHOICE LIST REPO ------------------
+echo -e "${BLUE}--- exec ${FNN}() (num_menu) ---${NORMAL}" #started functions
+arr=($(d2e ${dir_nm_opi_lst}))
+res=($(d2e ${dir_nm_opi_lst}))
+
+#{arr_res}
+# arr+=("aaaaaaaaa")
+# res+=("bbbbbbbbb")
+# arr+=("aaaaaaaaa")
+# res+=("bbbbbbbbb")
+# arr+=("aaaaaaaaa")
+# res+=("bbbbbbbbb")
+# arr+=("aaaaaaaaa")
+# res+=("bbbbbbbbb")
+arr+=("exit menu")
+res+=("return 0")
+
+elegendi_done=0
+
+nm_opi_run_change_repo() { # $1 num menu-1
+
+    if [[ $1 -eq 16 ]]; then
+        touch ${PD_PATH}/.d/.mul/nm_opi_/lst/017_change_repo.ax.lst
+        gig_file_change_repo_smp0 ${REPO_PATH} ${PD_PATH}/.d/.mul/nm_opi_/lst/017_change_repo.ax.lst
+    fi
+
+}
+
+if [ $(num_01 ${ARGS1}) -eq 1 ] && [ ${ARGS1} -le ${#arr[@]} ]; then
+    num_res=$((${ARGS1} - 1))
+
+    nm_opi_run_change_repo $num_res
+
+    file_lst=${dir_nm_opi_lst}/${res[${num_res}]}
+    elegendi_done=1
+fi
+
+if [ ${elegendi_done} -eq 0 ]; then
+    PS3="eligendi actiones: "
+    select item_arr in "${arr[@]}"; do
+        for ((i = 0; i < 1000; i++)); do
+            if [[ ${item_arr} == ${arr[$i]} ]]; then
+
+                nm_opi_run_change_repo $i
+
+                file_lst=${dir_nm_opi_lst}/${res[$i]}
+                # ${FNN} $@
+            fi
+        done
+        break
+    done
+fi
+
+echo -e "${GREEN}\$file_lst = $file_lst${NORMAL}" #print variable
+
+arr_name_repo=($(f2e "${file_lst}"))
+# parr3e_ arr_name_repo
+
+#* ---------- END CHOICE LIST REPO ------------------
+
+#* ---------- START CHOICE FLOW ------------------
+
+echo -e "${BLUE}--- exec ${FNN}() (num_menu) ---${NORMAL}" #started functions
+arr=($(d2e "${dir_nm_opi_set_fn}"))
+res=()
+
+#{arr_res}
+# arr+=("aaaaaaaaa")
+# res+=("bbbbbbbbb")
+# arr+=("aaaaaaaaa")
+# res+=("bbbbbbbbb")
+# arr+=("aaaaaaaaa")
+# res+=("bbbbbbbbb")
+# arr+=("aaaaaaaaa")
+# res+=("bbbbbbbbb")
+arr+=("exit menu")
+res+=("return 0")
+
+elegendi_done=0
+
+if [ $(num_01 ${ARGS2}) -eq 1 ] && [ ${ARGS2} -le ${#arr[@]} ]; then
+    num_res=$((${ARGS2} - 1))
+    fn_set_nm_opi_="$(prs_f -n ${arr[${num_res}]})"
+    elegendi_done=1
+fi
+
+if [ "${elegendi_done}" -eq 0 ]; then
+    PS3="eligendi actiones: "
+    select item_arr in "${arr[@]}"; do
+        for ((i = 0; i < 1000; i++)); do
+            if [[ ${item_arr} == ${arr[$i]} ]]; then
+                fn_set_nm_opi_="$(prs_f -n ${arr[$i]})"
+                # ${FNN} $@
+
+            fi
+        done
+        break
+    done
+fi
+#[[b_sel]]
+
+#* ---------- END CHOICE CHOICE FLOW ------------------
+
+#! ---------- START define nm_opi_nm_set() ----------
+
+echo -e "${RED} ---------- start checked params ---------- ${NORMAL}" #exit 1
+echo -e "${GREEN}\$fn_set_nm_opi_ = $fn_set_nm_opi_${NORMAL}"         #print variable
+echo -e "${GREEN}\$fn_var_nm_opi_ = $fn_var_nm_opi_${NORMAL}"         #print variable
+parr3e_ arr_name_repo
+echo -e "${RED} ---------- end checked params ---------- ${NORMAL}" #exit 1
+
+# plt_pause "DO? : start process with THAT params?"
+
+nm_opi_nm_set() {
+    echo -e "${BLUE}--- nm_opi_nm_set() ---${NORMAL}"   #sistem info mesage
+    echo -e "${GREEN}\$name_repo = $name_repo${NORMAL}" #print variable
+    "${fn_set_nm_opi_}"
+
+}
+
+# nm_opi_check_ham_name_repo() {
+#     echo -e "${BLUE}--- nm_opi_check_ham_name_repo() ---${NORMAL}"                               #sistem info mesage
+#     echo -e "${HLIGHT}--- dexec2err__ file://${REPO_PATH}/${name_repo}/.d/.ham/ham ---${NORMAL}" #start files
+
+#     if ! dexec2err__ "${REPO_PATH}"/"${name_repo}"/.d/.ham/ham; then
+#         plt_info "in nm_opi_check_ham_name_repo() : FAIL_EXEC : 'dexec2err__ ${REPO_PATH}/${name_repo}/.d/.ham/ham' : return 1"
+#         return 1
+#     fi
+# }
+
+#! ---------- END define nm_opi_nm_set() ----------
+
+for name_repo in "${arr_name_repo[@]}"; do
+
+    #? use function from
+
+    #? main check
+    if [ -f "${REPO_PATH}/${name_repo}"/.d/.ham/main/main.ham ]; then
+        if ! . "${REPO_PATH}/${name_repo}"/.d/.ham/main/main.ham; then
+            plt_exit "in nm_opi_() : FAIL_EXEC : continue? : '. file://${REPO_PATH}/${name_repo}/.d/.ham/main/main.ham' {with \$name_repo = '$name_repo'} : continue"
+            continue
+        fi
+    fi
+
+    #? ham check
+    # if ! nm_opi_check_ham_name_repo; then
+    #     plt_exit "in nm_opi_() : FAIL_EXEC : nm_opi_check_ham_name_repo {with \$name_repo = '$name_repo'}"
+    # fi
+
+    if ! nm_opi_up_to_memory_var; then
+        plt_exit "in nm_opi_() : FAIL_EXEC : nm_opi_up_to_memory_var {with \$name_repo = '$name_repo'}"
+    fi
+
+    if ! nm_opi_nm_set; then
+        plt_exit "in nm_opi_() : FAIL_EXEC : nm_opi_nm_set {with \$name_repo = '$name_repo'}"
+    fi
+
+done
+
+#[[b_sel]]
+
+#{main_body_fn}
+
+#?---------------------------------------
+#?---------------------------------------------
+#?--------------------------------------------------------

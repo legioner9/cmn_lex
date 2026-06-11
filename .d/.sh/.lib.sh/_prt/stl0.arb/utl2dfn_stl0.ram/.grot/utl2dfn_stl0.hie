@@ -1,0 +1,28 @@
+# HIE utl2dfn_stl0 
+
+## CAUSA:
+ПРИЧИНА создания:
+<!-- {{fn_hie_body_CAUSA}} -->
+Требуется создать директорию привязанную bnd к результату работы утилиты et  
+
+
+## FORMULA:
+СХЕМА решения:
+<!-- {{fn_hie_body_FORMULA}} -->
+
+
+
+
+## DOGMA:
+РЕШЕНИЕ задачи:
+<!-- {{fn_hie_body_DOGMA}} -->
+bnd_et=$1
+bnd_dr=$(_prs_f -d  )
+
+
+### TST
+<!-- {{fn_hie_body_TST}} -->
+
+
+### FLOW_1
+<!-- {{fn_hie_body_FLOW_1}} -->

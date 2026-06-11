@@ -1,0 +1,18 @@
+    echo -e "${HLIGHT}--- exec: git clean -n -d in file://$PPWD ---${NORMAL}";
+    git clean -n -fd;
+    if ! is_yes__ "DO_NOT!: but this prevent part REMOVE UNTRACK FILES 'git clean -fd' in file://$PPWD"; then
+        echo -e "${HLIGHT}--- exec: git clean -fd ---${NORMAL}";
+        git clean -fd;
+    fi;
+    echo -e "${HLIGHT}--- exec: git status ---${NORMAL}";
+    git status;
+    if ! is_yes__ "DO_NOT!: but this prevent part 'git reset --hard HEAD' in $PPWD"; then
+        echo -e "${HLIGHT}--- exec: git reset --hard HEAD ---${NORMAL}";
+        git reset --hard HEAD;
+    fi
+
+        if ! git rev-parse --show-toplevel > /dev/null; then
+        hint="'file://${PPWD}' NOT_GIT_DIR";
+        _st_exit "in fs= file://${fn_sh_file} , line=${LINENO}, ${FNN}() : : EXEC_FAIL : 'git rev-parse --show-toplevel' : ${hint} : return 1";
+        return 1;
+    fi; 

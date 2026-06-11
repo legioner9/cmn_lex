@@ -1,0 +1,88 @@
+.TH "/home/st/REPOBARE/_repo/st_rc_d/.d/.arb/stl0.arb/doxy_stl0.ram/.grot/_tst/_dir_tst/1.ossa/1.sh" 3 "Thu May 9 2024" "Version 0111" "Meus ossa primus A" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/home/st/REPOBARE/_repo/st_rc_d/.d/.arb/stl0.arb/doxy_stl0.ram/.grot/_tst/_dir_tst/1.ossa/1.sh \- Runs the cooles things in the world\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBfunc_check_user_root\fP ()"
+.br
+.RI "Check User root\&. "
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "String \fBV_INTERNALSTARTTIME\fP = $(date +%s)"
+.br
+.RI "This holds the starttime\&. "
+.ti -1c
+.RI "String \fBV_CURRENTTIMESTAMP\fP = $(date +%y%m%d\-%H%M%S)"
+.br
+.RI "This holds the date in YYMMDD-HHMMSS format\&. "
+.ti -1c
+.RI "String \fBV_HOSTNAME\fP = $(hostname \-s)"
+.br
+.RI "This holds the hostname of the local system\&. "
+.ti -1c
+.RI "Exported String \fBD_SCRIPT\fP = $(cd $(dirname $0) && pwd)"
+.br
+.RI "The local directory of the script\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Runs the cooles things in the world\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+Uli Wolf 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+2016-06-08 
+.RE
+.PP
+\fBCopyright\fP
+.RS 4
+Released under the WTFPL
+.RE
+.PP
+This script provides the required code to run code that is cooler than anybody elses code 
+.SH "Function Documentation"
+.PP 
+.SS "func_check_user_root ()"
+
+.PP
+Check User root\&. 
+.PP
+\fBAuthor\fP
+.RS 4
+Uli Wolf The Second 
+.RE
+.PP
+\fBReturn values\fP
+.RS 4
+\fI0\fP if the user is root 
+.br
+\fI1\fP if the user is not root
+.RE
+.PP
+Checks if the current user is root 
+.SH "Variable Documentation"
+.PP 
+.SS "V_INTERNALSTARTTIME = $(date +%s)"
+
+.PP
+This holds the starttime\&. Time is measured in seconds since 1st\&. of January 1970\&. The value will be used to later calculate the runtime of the script\&. 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Meus ossa primus A from the source code\&.

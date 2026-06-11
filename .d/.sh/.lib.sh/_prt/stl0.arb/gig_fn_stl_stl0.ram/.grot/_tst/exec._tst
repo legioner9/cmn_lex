@@ -1,0 +1,40 @@
+#!/bin/bash
+
+#. "${HOME}/.bashrc"
+
+filename=${ST_RC_D_PATH}/.d/.arb/stl0.arb/gig_fn_stl_stl0.ram/.grot/_tst/exec._tst
+
+# echo -e "${HLIGHT}---start file://$filename ---${NORMAL}" # start file
+
+idir=$(pwd)
+
+# cd "$(prs_f -d $filename)" || qq_exit "$(prs_f -d filename) not found"
+
+dir=$(_prs_f -d "$filename")
+cd "$dir" || echo "FAIL_EXEC cd $dir" >&2
+. "$dir"/_flow_tst.sh &>/dev/null
+# . "$dir"/_flow_tst.sh &>res
+
+# cd "$dir"/use/ || qq_exit
+
+# ./main.bexe &>res
+
+#? if res, pre dirs -> diff -qr | diff -r
+
+flag=1
+if ! diff -q "$dir"/pre "$dir"/res >/dev/null; then
+    flag=0
+fi
+
+if [ 0 -eq "$flag" ]; then
+    echo "ANY in file://$dir fail" >&2
+    diff "$dir"/pre "$dir"/res >&2
+    return 1
+else
+    echo "ALL in file://$dir true"
+    return 0
+fi
+
+cd "$idir"
+
+unset filename

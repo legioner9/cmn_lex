@@ -1,0 +1,89 @@
+# HIE toc2f_stl0 
+
+## CAUSA:
+ПРИЧИНА создания:
+<!-- {{fn_hie_body_CAUSA}} -->
+необходимо автоматическое создание TOC таблицы в .md
+
+
+## FORMULA:
+СХЕМА решения:
+<!-- {{fn_hie_body_FORMULA}} -->
+
+file.md остается неизменным - генерируется новый файл file.toc.md c ТОС сразу
+    за строкой  `<!-- TOC -->` , схема генерации :
+
+Файл file.md с
+```    
+...
+#{n} head_str
+...
+```
+Файл преобразуем в file.toc.md с :
+
+```
+...
+<!-- TOC -->
+...
+<space>{n}-[fn_head(head_str)](#rnd_num)
+
+...
+<a id="rnd_num"></a>
+#{n} head_str
+...
+```
+
+где:
+- в начале документа должен быть head_1 заголовок 1 уровня
+- `rnd_num` - случайное число - это обеспечит уникальность и идентификвтора html разметки
+- `[head_anc](path_anc)` - состав ссылки
+- `head_anc` не должен содержать более двух md ссылок
+- после `<!-- TOC toc2f_stl0 -->` перед `<!-- /TOC toc2f_stl0 -->` идет список всех ссылок на заголовки , его характеристики :
+    - глубина вложения `dps` строки списка соответствует вложенности заголовка `nhd` из `#{nhd}` : `dps=nhd-1`
+- `head_anc=fn_head(head_str)` - функция преобразование `head_str` , ее задачи
+    - если в `head_str` есть ссылка типа `[a](b)` заменить ее на `а`
+        - `(.*)\[(.*)\]\(.*\)(.*)\[(.*)\]\(.*\)` -> $1 $2 $3 $4 - обработка одной ссылок в строке example
+            - `$(echo "casd [sdcasd](vsdv) w [asd](dv) " > ggg ; sed -r 's/(.*)\[(.*)\]\(.*\)(.*)/\1[\2]/' ggg ; rm ggg)`
+            - `head_anc=$(echo "$head_str" > ggg ; sed -r 's/(.*)\[(.*)\]\(.*\)(.*)/\1[\2]/' ggg ; rm ggg)`
+            
+- выбираем список строк-заголовков `grep -E '(^# |^## |^### |^#### |^##### |^###### )' $file_md`
+- только номера `grep -E -n '(^# |^## |^### |^#### |^##### |^###### )' $file_md | grep -Eo '^[^:]+'` 
+- с номером `grep -E -n '(^# |^## |^### |^#### |^##### |^###### )' $file_md` -> nom:string 
+- вставить строку с номером 8 `sed -i '8i This is Line 8' file_md`
+
+
+## DOGMA:
+РЕШЕНИЕ задачи:
+<!-- {{fn_hie_body_DOGMA}} -->
+
+
+### TST
+<!-- {{fn_hie_body_TST}} -->
+
+### FLOW_1
+<!-- {{fn_hie_body_FLOW_1}} -->
+
+#### sed
+
+1.
+    sed -e '1 i\'$'\n''new first line' <<<$'a\nb'
+
+    new first line
+    a
+    b
+
+2.
+    cat tst.txt
+    mykey=one
+    before=me
+    anothervalue=two
+    lastvalue=three
+
+    sed '/^anothervalue=.*/i before=me\nbefore2=me2' test.txt
+
+    cat tst.txt
+    mykey=one
+    before=me
+    before2=me2
+    anothervalue=two
+    lastvalue=three

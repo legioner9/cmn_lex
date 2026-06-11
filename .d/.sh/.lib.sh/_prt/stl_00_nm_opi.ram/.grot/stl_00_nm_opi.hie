@@ -1,0 +1,57 @@
+# HIE stl_00_nm_opi 
+
+## CAUSA:
+ПРИЧИНА создания:
+<!-- {{fn_hie_body_CAUSA}} -->
+from ${STL_REPO_PATH}/.s/Axon/Lexicon.ax/words.ax.md
+    [opi] opibus        - [git] ресурсы
+    [nm] nomenclatura   - [меню] список
+
+Нужна функция для сохранения гитресурсов
+Сохранение на
+gitflic
+github
+/run/media/st/MY_ONE
+/run/media/st/TOSH
+
+## FORMULA:
+СХЕМА решения:
+<!-- {{fn_hie_body_FORMULA}} -->
+### Загружаем переменные (из меню файлов nm)
+
+### Выбираем (nm) процедуру использующую вышепеременные - набор стандартных действий гит
+    - add
+    - commit
+    - push
+    - pull
+    - add remote
+    - clone
+
+### Выбираем (nm) набор репо с которым будет работать процедура
+    - все загруженные на диск
+    - некоторые загруженные на диск
+    - только измененные среди всех загруженных на диск
+    - из списка
+
+### Использование хуков - внешние процедуры используемые before-after
+    - системные - from data fn : [${d_lib_grot_opt}/.ham/sys/] but use var from user ($HOME) files
+        - файл с флагом защиты репо от изменений ${HOME}/.w - command pull reseted any changes in repo
+    - from data fn - ${d_lib_grot_opt}/.ham/nm_opi/
+    - from PATH_TO_REPO/.d/.ham
+
+## DOGMA:
+РЕШЕНИЕ задачи:
+<!-- {{fn_hie_body_DOGMA}} -->
+### dr_fl exam:
+    - ${REPO_PATH}/plt/actio/mall/dir_nm_opi_
+    - ${REPO_PATH}/plt/.d/.mul/nm_opi_
+    - ${REPO_PATH}/plt/.d/.sal.ax/nm_opi_/nm_opi_.sal
+    - ${REPO_PATH}/plt/actio/mall/dir_nm_opi_/.d.ax/.sal.ax/nm_opi_.body.nsc.sh
+
+
+### TST
+<!-- {{fn_hie_body_TST}} -->
+
+
+### FLOW_1
+<!-- {{fn_hie_body_FLOW_1}} -->

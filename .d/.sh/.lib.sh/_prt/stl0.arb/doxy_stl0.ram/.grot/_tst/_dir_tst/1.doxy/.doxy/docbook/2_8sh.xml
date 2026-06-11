@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_2_8sh" xml:lang="en-US">
+<title>/home/st/REPOBARE/_repo/st_rc_d/.d/.arb/stl0.arb/doxy_stl0.ram/.grot/_tst/_dir_tst/2.ossa/2.sh File Reference</title>
+<indexterm><primary>/home/st/REPOBARE/_repo/st_rc_d/.d/.arb/stl0.arb/doxy_stl0.ram/.grot/_tst/_dir_tst/2.ossa/2.sh</primary></indexterm>
+<para>
+
+<para>Runs the cooles things in the world. </para>
+ 
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_2_8sh_1aced1eae7629d21fa6cfc1077ed460a09"/><emphasis role="strong">func_check_user_root</emphasis> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_2_8sh_1ad441e79f437ef238f73879de31d1141a"/>String <emphasis role="strong">V_INTERNALSTARTTIME</emphasis> = $(date +%s)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_2_8sh_1a5b495c94efec58659086168abbe47906"/>String <emphasis role="strong">V_CURRENTTIMESTAMP</emphasis> = $(date +%y%m%d-%H%M%S)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_2_8sh_1af010cd2e6bd799458894029b7365f152"/>String <emphasis role="strong">V_HOSTNAME</emphasis> = $(hostname -s)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_2_8sh_1ad9d878c0b5598608f0046245c7e815eb"/>Exported String <emphasis role="strong">D_SCRIPT</emphasis> = $(cd $(dirname $0) &amp;&amp; pwd)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Runs the cooles things in the world. </para>
+
+<para><formalpara><title>Author</title>
+
+<para>Uli Wolf </para>
+</formalpara>
+<formalpara><title>Date</title>
+
+<para>2016-06-08 </para>
+</formalpara>
+<formalpara><title>Copyright</title>
+
+<para>Released under the WTFPL</para>
+</formalpara>
+This script provides the required code to run code that is cooler than anybody elses code </para>
+</section>
+</section>

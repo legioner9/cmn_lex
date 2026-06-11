@@ -1,0 +1,77 @@
+\hypertarget{1_8sh}{}\doxysection{/home/st/\+REPOBARE/\+\_\+repo/st\+\_\+rc\+\_\+d/.d/.arb/stl0.arb/doxy\+\_\+stl0.ram/.grot/\+\_\+tst/\+\_\+dir\+\_\+tst/1.ossa/1.sh File Reference}
+\label{1_8sh}\index{/home/st/REPOBARE/\_repo/st\_rc\_d/.d/.arb/stl0.arb/doxy\_stl0.ram/.grot/\_tst/\_dir\_tst/1.ossa/1.sh@{/home/st/REPOBARE/\_repo/st\_rc\_d/.d/.arb/stl0.arb/doxy\_stl0.ram/.grot/\_tst/\_dir\_tst/1.ossa/1.sh}}
+
+
+Runs the cooles things in the world.  
+
+
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{1_8sh_aced1eae7629d21fa6cfc1077ed460a09}{func\+\_\+check\+\_\+user\+\_\+root}} ()
+\begin{DoxyCompactList}\small\item\em Check User root. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+String \mbox{\hyperlink{1_8sh_a3954d7bfa09f488946bc9fd37ef3e7e0}{V\+\_\+\+INTERNALSTARTTIME}} = \$(date +\%s)
+\begin{DoxyCompactList}\small\item\em This holds the starttime. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{1_8sh_a770b63fb2fd5114ddc4577dc8d6e1b99}\label{1_8sh_a770b63fb2fd5114ddc4577dc8d6e1b99}} 
+String \mbox{\hyperlink{1_8sh_a770b63fb2fd5114ddc4577dc8d6e1b99}{V\+\_\+\+CURRENTTIMESTAMP}} = \$(date +\%y\%m\%d-\/\%H\%M\%S)
+\begin{DoxyCompactList}\small\item\em This holds the date in YYMMDD-\/\+HHMMSS format. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{1_8sh_a794dd8efc8d3cf27ed9b62732418e0e2}\label{1_8sh_a794dd8efc8d3cf27ed9b62732418e0e2}} 
+String \mbox{\hyperlink{1_8sh_a794dd8efc8d3cf27ed9b62732418e0e2}{V\+\_\+\+HOSTNAME}} = \$(hostname -\/s)
+\begin{DoxyCompactList}\small\item\em This holds the hostname of the local system. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{1_8sh_ad9d878c0b5598608f0046245c7e815eb}\label{1_8sh_ad9d878c0b5598608f0046245c7e815eb}} 
+Exported String \mbox{\hyperlink{1_8sh_ad9d878c0b5598608f0046245c7e815eb}{D\+\_\+\+SCRIPT}} = \$(cd \$(dirname \$0) \&\& pwd)
+\begin{DoxyCompactList}\small\item\em The local directory of the script. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Runs the cooles things in the world. 
+
+\begin{DoxyAuthor}{Author}
+Uli Wolf 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2016-\/06-\/08 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Released under the WTFPL
+\end{DoxyCopyright}
+This script provides the required code to run code that is cooler than anybody elses code 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{1_8sh_aced1eae7629d21fa6cfc1077ed460a09}\label{1_8sh_aced1eae7629d21fa6cfc1077ed460a09}} 
+\index{1.sh@{1.sh}!func\_check\_user\_root@{func\_check\_user\_root}}
+\index{func\_check\_user\_root@{func\_check\_user\_root}!1.sh@{1.sh}}
+\doxysubsubsection{\texorpdfstring{func\_check\_user\_root()}{func\_check\_user\_root()}}
+{\footnotesize\ttfamily func\+\_\+check\+\_\+user\+\_\+root (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Check User root. 
+
+\begin{DoxyAuthor}{Author}
+Uli Wolf The Second 
+\end{DoxyAuthor}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & if the user is root \\
+\hline
+{\em 1} & if the user is not root\\
+\hline
+\end{DoxyRetVals}
+Checks if the current user is root 
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{1_8sh_a3954d7bfa09f488946bc9fd37ef3e7e0}\label{1_8sh_a3954d7bfa09f488946bc9fd37ef3e7e0}} 
+\index{1.sh@{1.sh}!V\_INTERNALSTARTTIME@{V\_INTERNALSTARTTIME}}
+\index{V\_INTERNALSTARTTIME@{V\_INTERNALSTARTTIME}!1.sh@{1.sh}}
+\doxysubsubsection{\texorpdfstring{V\_INTERNALSTARTTIME}{V\_INTERNALSTARTTIME}}
+{\footnotesize\ttfamily V\+\_\+\+INTERNALSTARTTIME = \$(date +\%s)}
+
+
+
+This holds the starttime. 
+
+Time is measured in seconds since 1st. of January 1970. The value will be used to later calculate the runtime of the script. 
