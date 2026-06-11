@@ -1,0 +1,1 @@
+echo "hello, i will go to sleep" && sleep 5 && echo "I Finished sleeping !" & echo "Second command here !"
