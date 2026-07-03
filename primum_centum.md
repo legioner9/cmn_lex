@@ -178,6 +178,7 @@
     ramus         - ветвь
     folium        - лист
     bud           - бутон
+    do            - кувшин
 
 
     prototypum    - прототип
