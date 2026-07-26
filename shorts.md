@@ -3,7 +3,7 @@
 [ps] - process
 [kl] - kill
 [rm] - remove
-[mm]  - menu
+[mm] - menu
 [im] - image
 [pull]
 [push]
