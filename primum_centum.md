@@ -194,7 +194,7 @@
 
     ossa          - остов
     primus gradus - первые шаги
-    
+    urbs          - город
 
     
 
