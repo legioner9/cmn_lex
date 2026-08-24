@@ -179,7 +179,7 @@
     folium        - лист
     bud           - бутон
     do            - кувшин
-
+    radix         - корень
 
     prototypum    - прототип
     essentia hoc  - суть этого
