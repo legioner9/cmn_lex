@@ -21,4 +21,4 @@
 
     EXA:
         NT_DL+DR+*{REN} - not delited result parent dir for result dir
-        IS_EST+FL+^^{REN} - exist file with name result file 
+        IS_EST+FL+&{REN} - exist file with name result file 
