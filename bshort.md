@@ -29,6 +29,10 @@
     {^XXX}  - without first prext.XXX
     {^^XXX} - without first and second prext1.prext2.XXX
 
+    IFS:
+        BELONG_DR:
+            >{EN}=*{EN}/_&{EN}.d
+
     realization:
     l_01_prs_f :: pars $1 path - stdout part
 	path=/the/path/_foo.bar.ext.txt      
