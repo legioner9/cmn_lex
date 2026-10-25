@@ -31,7 +31,9 @@
 
     IFS:
         BELONG_DR:
-            >{EN}=*{EN}/_&{EN}.d
+            >{EN} = *{EN}/_&{EN}.d
+            LOG_FL:
+                >>{EN} = >{EN}/&{EN}.lg
 
     realization:
     l_01_prs_f :: pars $1 path - stdout part
