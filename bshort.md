@@ -30,9 +30,9 @@
     {^^XXX} - without first and second prext1.prext2.XXX
 
     IFS:
-        BELONG_DR:
+        BELONG_DR [bldr]:
             >{EN} = *{EN}/_&{EN}.d
-            LOG_FL:
+            LOG_FL [bllg]:
                 >>{EN} = >{EN}/&{EN}.lg
 
     realization:
