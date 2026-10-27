@@ -18,6 +18,10 @@
     G[FN_DR+PR_DR(as .tst)] - usually .fnsh
     G[PR_DR+PR_DR(as .tst)] - usually .prsh
 
+    entety's str:
+    "XXX"
+        - "XXX:0:1" substr as ${XXX:0:1}
+
     entety's path: 
     {XXX}   - full path to XXX
     {XXX}^{YYY} - rel path to XXX outoff YYY
