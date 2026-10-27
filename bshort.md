@@ -33,7 +33,9 @@
         BELONG_DR [bldr]:
             >{EN} = *{EN}/_&{EN}.d
             LOG_FL [bllg]:
-                >>{EN} = >{EN}/&{EN}.lg
+                >{EN}:lg = >{EN}/&{EN}.lg.f
+            LOG_FL [blex]:
+                >{EN}:ex = >{EN}/&{EN}.ex.f
 
     realization:
     l_01_prs_f :: pars $1 path - stdout part
