@@ -70,8 +70,10 @@
                 {e~} = {>e}/{&e}~
 
     ADD_ST_DSL:
-         ADD_ST_DSL:KEY
+        ADD_ST_DSL:KEY
             DO_RM_IEN - ques rm IEN
+        ADD_ST_DSL:FN
+            err1(){echo err_str; return 1}
 
 
     realization:
