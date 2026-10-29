@@ -33,7 +33,7 @@
     {^XXX}  - without first prext.XXX
     {^^XXX} - without first and second prext1.prext2.XXX
 
-    IFS:
+    external DSL:
         ground entity:
             EN - entity of file system (now [(f|d)] )
         first level entity :
@@ -53,14 +53,15 @@
             {e^^} - discard postfix ext1.ext (l_01_prs_f -n2 {})
         organize syntax:
             [] - semantic isolation
-        BELONG_DR [bldr]:
-            [{>EN} = {*EN}/_{&EN}.d] == [>EN is {{{*EN}/_{&EN}.d}}]
             
+        BELONG_DR [bldr]:
+            [{>e} = {*e}/_{&e}.d] == [>e is {{{*e}/_{&e}.d}}]            
             LOG_FL [bllg]:
-                {>EN:lg} = {>EN}/{&EN}.lg.f
+                {>e:lg} = {>e}/{&e}.lg.f
             LOG_FL [blex]:
-                {>EN:ex} = {>EN}/{&EN}.ex.f
+                {>e:ex} = {>e}/{&e}.ex.f
         BELONG_BCP [bbcp]:
+                {e~} = {>e}/{&e}~
 
 
     realization:
