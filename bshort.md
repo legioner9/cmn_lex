@@ -33,7 +33,7 @@
     {^XXX}  - without first prext.XXX
     {^^XXX} - without first and second prext1.prext2.XXX
 
-    external DSL:
+    external ST_DSL:
         ground entity:
             EN - entity of file system (now [(f|d)] )
         first level entity :
@@ -53,6 +53,9 @@
             {e^^} - discard postfix ext1.ext (l_01_prs_f -n2 {})
         organize syntax:
             [] - semantic isolation
+        bash syntax:
+            / - subdir 
+            . - dot in name
             
         BELONG_DR [bldr]:
             [{>e} = {*e}/_{&e}.d] == [>e is {{{*e}/_{&e}.d}}]            
