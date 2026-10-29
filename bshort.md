@@ -56,6 +56,9 @@
         bash syntax:
             / - subdir 
             . - dot in name
+            [ifques] = [if l_01_is_yes]
+            [thn] = [then]
+            <procedure arg> = [do procedure with arg]
             
         BELONG_DR [bldr]:
             [{>e} = {*e}/_{&e}.d] == [>e is {{{*e}/_{&e}.d}}]            
