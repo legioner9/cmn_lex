@@ -33,7 +33,7 @@
     {^XXX}  - without first prext.XXX
     {^^XXX} - without first and second prext1.prext2.XXX
 
-    external ST_DSL:
+    ST_DSL:
         ground entity:
             EN - entity of file system (now [(f|d)] )
         first level entity :
@@ -68,6 +68,10 @@
                 {>e:ex} = {>e}/{&e}.ex.f
         BELONG_BCP [bbcp]:
                 {e~} = {>e}/{&e}~
+
+    ADD_ST_DSL:
+         ADD_ST_DSL:KEY
+            DO_RM_IEN - ques rm IEN
 
 
     realization:
