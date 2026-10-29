@@ -35,30 +35,31 @@
 
     IFS:
         ground entity:
-            EN - entity file system (now [(f|d)] )
+            EN - entity of file system (now [(f|d)] )
         first level entity :
             IEN - init entity
             REN - result entity
         operators betwieen:
             = - identity values
             is - identity content
+            == - sameness by definition
         operators with path:
             {e} - get path from entity e
             {{e}} - define entity from path
             {&e} - get NM entity (basename {})
             {*e} - get parent DR entity (dirname {})
+                {e} == {*e}/{&e}
             {e^} - discard postfix .ext (l_01_prs_f -n {})
             {e^^} - discard postfix ext1.ext (l_01_prs_f -n2 {})
         organize syntax:
             [] - semantic isolation
         BELONG_DR [bldr]:
-            {>EN} = {*EN}/_{&EN}.d
-            >EN is {{{*EN}/_{&EN}.d}}
-
+            [{>EN} = {*EN}/_{&EN}.d] == [>EN is {{{*EN}/_{&EN}.d}}]
+            
             LOG_FL [bllg]:
-                {>EN:lg} = "{>EN}/&{EN}.lg.f"
+                {>EN:lg} = {>EN}/{&EN}.lg.f
             LOG_FL [blex]:
-                {>EN:ex} = "{>EN}/&{EN}.ex.f"
+                {>EN:ex} = {>EN}/{&EN}.ex.f
         BELONG_BCP [bbcp]:
 
 
