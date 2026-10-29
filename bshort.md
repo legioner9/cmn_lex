@@ -51,6 +51,7 @@
                 {e} == {*e}/{&e}
             {e^} - discard postfix .ext (l_01_prs_f -n {})
             {e^^} - discard postfix ext1.ext (l_01_prs_f -n2 {})
+            e> - cat {e}
         organize syntax:
             [] - semantic isolation
         bash syntax:
