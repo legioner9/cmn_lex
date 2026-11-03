@@ -14,3 +14,7 @@ fns_bsh_002_f2fs_1 ${HOME}/rpo/cmn_lex/.d/.dmd/cmn_lex.rpo.dmd ${HOME}/rpo/cmn_l
 fns_bsh_005_f2fs_d2md2 ${HOME}/rpo/cmn_lex/.d/.dmd/cmn_lex.rpo.dmd ${HOME}/rpo/cmn_lex/RPO.md
 # Вт 03 ноя 2026 23:58:20 +07
 fns_bsh_002_f2fs_1 ${HOME}/rpo/cmn_lex/.d/.dmd/cmn_lex.rpo.dmd ${HOME}/rpo/cmn_lex/.d/.dmd/_cmn_lex.rpo.dmd.d/res.d
+# Ср 04 ноя 2026 00:56:18 +07
+fns_bsh_005_f2fs_d2md2 ${HOME}/rpo/cmn_lex/.d/.dmd/cmn_lex.rpo.dmd ${HOME}/rpo/cmn_lex/RPO.md
+# Ср 04 ноя 2026 00:56:19 +07
+fns_bsh_002_f2fs_1 ${HOME}/rpo/cmn_lex/.d/.dmd/cmn_lex.rpo.dmd ${HOME}/rpo/cmn_lex/.d/.dmd/_cmn_lex.rpo.dmd.d/res.d
