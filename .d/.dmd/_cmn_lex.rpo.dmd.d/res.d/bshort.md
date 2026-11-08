@@ -52,6 +52,10 @@
             {e^} - discard postfix .ext (l_01_prs_f -n {})
             {e^^} - discard postfix ext1.ext (l_01_prs_f -n2 {})
             e> - cat {e}
+        operators with entity:
+            (rm){e} - delete 'e'
+            (mk){e} - create empty 'e'
+            (-){e} == [(rm){e}; (mk){e}]
         organize syntax:
             [] - semantic isolation
         bash syntax:
