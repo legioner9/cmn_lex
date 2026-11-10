@@ -1,3 +1,5 @@
+    legioner9 :: DSL
+
     ST_DSL:
         ground entity:
             EN - entity of file system (now [(f|d)] )
@@ -71,10 +73,25 @@
                  - define: {e~} = {>e}/{&e}~
                  - proc:  (-{e~}) ; cp {e} {e~}
 
-    \"e:m:n\"    - is: substring
+    \"s:m:n\"    - is: substring [m,n] chars
                  - name: [sstr]
-                 - define: exa "e:0:1" substr as ${e:0:1}
-                 - proc: exa ${e:0:1}
+                 - define: exa "s:0:1" substr as ${s:0:1}
+                 - proc: exa ${s:0:1}
+
+        "f:ln"   - is: (fl|stdin) line 
+                 - name: [fln]
+                 - define: sh'string\n'
+                 - proc: IFS= read -r line < ${fl:-/dev/stdin}
+
+        (mk{e})  - is: (mkdir|touch) (dr|fl)
+                 - name: [mk]
+                 - define: 
+                 - proc:
+
+      (ifq-err)  - is: if ques [yes - (-{e})] or [no - (err1)]
+                 - name: 
+                 - define: 
+                 - proc:
 
         standart subprocesses :
 
@@ -111,3 +128,5 @@ examples ST_DSL realization : [EXA_ST_DSL](https://gitflic.ru/project/legioner9/
 	$(l_01_prs_f -po /the/path/_foo.bar.ext.txt)  : foo.bar.ext.txt 
         in:
 see type : [st_llib](https://gitflic.ru/project/legioner9/fns_bsh/blob/raw?file=.d%2F.sh%2Fl.sh)
+
+#@ define ST_DSL
