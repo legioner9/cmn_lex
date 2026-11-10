@@ -36,13 +36,37 @@
     ST_DSL:
         ground entity:
             EN - entity of file system (now [(f|d)] )
+
         first level entity :
             IEN - init entity
             REN - result entity
+
+        filesystem entity :
+            FL   - file
+            DR   - directory
+            FN   - FL with function
+            PR   - FL with procedure, self exec
+            FLS  - set of FL
+            AFLS - assoc FLS with ...
+            AFN  - assoc FLS with FN
+            APR  - assoc FLS with PR
+
+        filesystem operators :
+            GIR     - giger - generator FLS
+            G_FN    - GIR FN
+            G_PR    - GIR PR
+            G_FN_DR - G_FN and his AFLS 
+            G_PR_DR - G_PR and his AFLS
+
+        filesystem processes sintax:
+            () - process
+                (GIR) - result of the GIRs operation
+
         operators betwieen:
             = - identity values
             is - identity content
             == - sameness by definition
+
         operators with path:
             {e} - get path from entity e
             {{e}} - define entity from path
@@ -52,8 +76,10 @@
             {e^} - discard postfix .ext (l_01_prs_f -n {})
             {e^^} - discard postfix ext1.ext (l_01_prs_f -n2 {})
             e> - cat {e}
+
         organize syntax:
             [] - semantic isolation
+
         bash syntax:
             / - subdir 
             . - dot in name
@@ -65,17 +91,18 @@
             [{>e} = {*e}/_{&e}.d] == [>e is {{{*e}/_{&e}.d}}]            
             LOG_FL [bllg]:
                 {>e:lg} = {>e}/{&e}.lg.f
-            LOG_FL [blex]:
+            EXEC_FL [blex]:
                 {>e:ex} = {>e}/{&e}.ex.f
         BELONG_BCP [bbcp]:
                 {e~} = {>e}/{&e}~
+        SUBSTRING [sstr] :
+                "s:0:1" substr as ${s:0:1}
 
     ADD_ST_DSL:
         ADD_ST_DSL:KEY
             DO_RM_IEN - ques rm IEN
         ADD_ST_DSL:FN
             err1(){echo err_str; return 1}
-
 
     realization:
     l_01_prs_f :: pars $1 path - stdout part
