@@ -95,23 +95,6 @@
             [thn] = sh'then'
             <procedure arg> = [do procedure with arg]
                 - <ls {e}>
-            
-        BELONG_DR [bldr]:
-            [{>e} = {*e}/_{&e}.d] == [>e is {{{*e}/_{&e}.d}}]            
-            LOG_FL [bllg]:
-                {>e:lg} = {>e}/{&e}.lg.f
-            EXEC_FL [blex]:
-                {>e:ex} = {>e}/{&e}.ex.f
-        BELONG_BCP [bbcp]:
-                {e~} = {>e}/{&e}~
-        SUBSTRING [sstr] :
-                "s:0:1" substr as ${s:0:1}
-
-        ADD_ST_DSL:
-            ADD_ST_DSL:KEY
-                - DO_RM_IEN - ques rm IEN
-            ADD_ST_DSL:FN
-                - err1(){echo err_str; return 1}
 
 examples ST_DSL realization : [EXA_ST_DSL](https://gitflic.ru/project/legioner9/fns_bsh/blob/raw?file=TODO.md)
 
