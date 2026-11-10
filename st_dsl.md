@@ -32,7 +32,7 @@
             is - identity content
             == - sameness by definition
 
-        operators with path:
+        operators over paths:
             {e} - get path from entity e
             {{e}} - define entity from path
             {&e} - get NM entity (basename {})
@@ -42,15 +42,59 @@
             {e^^} - discard postfix ext1.ext (l_01_prs_f -n2 {})
             e> - cat {e}
 
+        compound operators:
+             template point 
+                 - is: 
+                 - name: 
+                 - define: 
+                 - proc:
+
+            {>e} - is: dir to which a {e} belong
+                 - name: [bldr]
+                 - define: [{>e} = {*e}/_{&e}.d] == [>e is {{{*e}/_{&e}.d}}]
+
+        {>e:lg}  - is: log file belonging to {e}
+                 - name: [bllg]
+                 - define: {>e:lg} = {>e}/{&e}.lg.f
+
+        {>e:ex}  - is: exec file belonging to {e}
+                 - name: [blex]
+                 - define: {>e:ex} = {>e}/{&e}.ex.f
+
+        (-{e})   - is: {e} releas process
+                 - name: [rme]
+                 - define: (-{e}) = not exist
+                 - proc: ifexst {e~} thn rm {e~}
+
+        {e~}     - is: {e} backup
+                 - name: [bbcp]
+                 - define: {e~} = {>e}/{&e}~
+                 - proc:  (-{e~}) ; cp {e} {e~}
+
+    \"e:m:n\"    - is: substring
+                 - name: [sstr]
+                 - define: exa "e:0:1" substr as ${e:0:1}
+                 - proc: exa ${e:0:1}
+
+        standart subprocesses :
+
+                 - is: 
+                 - proc:
+
+         (ret1)  - is: reurn error
+                 - proc: err1(){echo err_str; return 1}
+
         organize syntax:
             [] - semantic isolation
 
         bash syntax:
-            / - subdir 
+            / - subdir sh'/' 
             . - dot in name
-            [ifques] = [if l_01_is_yes]
-            [thn] = [then]
+            [ifques] = sh'if l_01_is_yes'
+            [ifexst] = sh'if [[(-f|-d) ...]]' 
+            [thn] = sh'then'
             <procedure arg> = [do procedure with arg]
+                - <ls {e}>
             
         BELONG_DR [bldr]:
             [{>e} = {*e}/_{&e}.d] == [>e is {{{*e}/_{&e}.d}}]            
@@ -71,7 +115,7 @@
 
 examples ST_DSL realization : [EXA_ST_DSL](https://gitflic.ru/project/legioner9/fns_bsh/blob/raw?file=TODO.md)
 
-    realization:
+    parser of path:
     l_01_prs_f :: pars $1 path - stdout part
 	path=/the/path/_foo.bar.ext.txt      
 	$(l_01_prs_f -d /the/path/_foo.bar.ext.txt)   : /the/path 
