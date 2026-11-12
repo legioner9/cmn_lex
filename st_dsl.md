@@ -13,7 +13,7 @@
             DR   - directory
             FN   - FL with function
             PR   - FL with procedure, self exec
-            FLS  - set of FL
+            FLS  - set of any FL
             AFLS - assoc FLS with ...
             AFN  - assoc FLS with FN
             APR  - assoc FLS with PR
@@ -112,6 +112,8 @@
             [thn] = sh'then'
             <procedure arg> = [do procedure with arg]
                 - <ls {e}>
+            [[fbl'N']]'NM' == fns_bsh_00'N'_'NM'
+                - [[fbl4]]bbcp_rm as fns_bsh_004_bbcp_rm
 
 examples ST_DSL realization : [EXA_ST_DSL](https://gitflic.ru/project/legioner9/fns_bsh/blob/raw?file=TODO.md)
 
