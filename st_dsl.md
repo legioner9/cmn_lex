@@ -114,6 +114,10 @@
                 - <ls {e}>
             [[fbl'N']]'NM' == fns_bsh_00'N'_'NM'
                 - [[fbl4]]bbcp_rm as fns_bsh_004_bbcp_rm
+        sed exchange (in doing section hlp):
+            .dol. - $
+            .u. - '
+            .d. - "
 
 examples ST_DSL realization : [EXA_ST_DSL](https://gitflic.ru/project/legioner9/fns_bsh/blob/raw?file=TODO.md)
 
