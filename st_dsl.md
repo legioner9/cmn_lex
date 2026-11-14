@@ -118,6 +118,8 @@
             .dol. - $
             .u. - '
             .d. - "
+            .cl. - [
+            .cr. - ]
 
 examples ST_DSL realization : [EXA_ST_DSL](https://gitflic.ru/project/legioner9/fns_bsh/blob/raw?file=TODO.md)
 
