@@ -161,5 +161,11 @@ latina:
 {FOL} pth to {CEL}
 {RDX} dir with {CEL}
 
+{CEL}={RDX}/{16NUM}/
+    /_vis
+    /_data
+    /d
+    _main.sh
+
 
 {RDX}
