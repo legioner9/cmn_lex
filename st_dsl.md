@@ -138,3 +138,28 @@ examples ST_DSL realization : [EXA_ST_DSL](https://gitflic.ru/project/legioner9/
 see type : [st_llib](https://gitflic.ru/project/legioner9/fns_bsh/blob/raw?file=.d%2F.sh%2Fl.sh)
 
 #@ define ST_DSL
+
+latina:
+
+    phylum        - тип
+    vis           - суть
+    ora           - край
+    silva         - лес
+    arbor         - дерево
+    truncus       - ствол
+    ramus         - ветвь
+    folium        - лист
+    bud           - бутон
+    do            - кувшин
+    radix         - корень
+    cella         - ячейка
+
+
+{ARB} dir with {RAM}
+{RAM} dir with {RAM} and {BUD}
+{BUD} file with {FOL}
+{FOL} pth to {CEL}
+{RDX} dir with {CEL}
+
+
+{RDX}
