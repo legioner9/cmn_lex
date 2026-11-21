@@ -153,6 +153,7 @@ latina:
     do            - кувшин
     radix         - корень
     cella         - ячейка
+    grot          - пещера
 
 
 {ARB} dir with {RAM}
@@ -163,9 +164,16 @@ latina:
 
 {CEL}={RDX}/{16NUM}/
     /_vis
+        /pth
+            - pnt_1:pnt_2...
+            is ::
+                # pnt_1
+                    ## pnt_2 
+                        ### grot
     /_data
-    /d
+    /grot
     _main.sh
+
 
 
 {RDX}
