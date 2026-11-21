@@ -160,9 +160,13 @@ latina:
 {RAM} dir with {RAM} and {BUD}
 {BUD} file with {FOL}
 {FOL} pth to {CEL}
-{RDX} dir with {CEL}
 
-{CEL}={RDX}/{16NUM}/
+{ARB}.d1f/{RAM}
+    /{RAM}
+    /{BUD::{16NUM}}.f1f 
+
+{RDX} dir with {CEL}
+{CEL}={GRN}.grn/{RDX}.rdx/{16NUM}.cel/
     /_vis
         /pth
             - pnt_1:pnt_2...
@@ -174,6 +178,3 @@ latina:
     /grot
     _main.sh
 
-
-
-{RDX}
